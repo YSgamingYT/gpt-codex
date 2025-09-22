@@ -1,0 +1,123 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 2rem 1.5rem 2.5rem;
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  position: sticky;
+  top: 6.5rem;
+  background: linear-gradient(180deg, rgba(20, 22, 35, 0.95) 0%, rgba(10, 12, 21, 0.4) 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+}
+
+.heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.curatedList {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.curatedCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1.1rem;
+  text-align: left;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease, border 0.25s ease;
+}
+
+.curatedCard:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.active {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.curatedLabel {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.curatedDescription {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.sectionHeader h3 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.loading {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.categoryChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, border 0.2s ease;
+}
+
+.chip:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.activeChip {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.65));
+  color: #10121a;
+  border-color: transparent;
+}
+
+@media (max-width: 1280px) {
+  .sidebar {
+    position: static;
+    max-height: none;
+    flex-direction: column;
+    border-radius: 1.25rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    border-right: none;
+    padding: 1.5rem 1rem 1.75rem;
+  }
+}

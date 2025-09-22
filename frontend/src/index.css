@@ -1,0 +1,59 @@
+:root {
+  font-family: 'Inter', 'SF Pro Display', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  --background: radial-gradient(circle at top left, #1b2140, #070812 55%);
+  --surface: rgba(16, 20, 34, 0.85);
+  --surface-strong: rgba(22, 28, 48, 0.95);
+  --text-primary: #f7f8ff;
+  --text-secondary: rgba(227, 229, 255, 0.78);
+  --text-muted: rgba(200, 204, 232, 0.62);
+  --accent: #7b6cff;
+  --accent-secondary: #ff72b6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+#root {
+  min-height: 100vh;
+}

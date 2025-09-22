@@ -1,0 +1,38 @@
+.playerWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 24px 44px rgba(5, 9, 20, 0.55);
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  min-height: 320px;
+}
+
+.placeholder h2 {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+}
+
+.placeholder p {
+  color: var(--text-secondary);
+  max-width: 28ch;
+}

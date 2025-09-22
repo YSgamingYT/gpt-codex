@@ -1,0 +1,64 @@
+.app {
+  min-height: 100vh;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr 380px;
+  gap: 2rem;
+  width: min(1420px, 100% - 4rem);
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.playerPane {
+  position: sticky;
+  top: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: fit-content;
+}
+
+@media (max-width: 1280px) {
+  .layout {
+    grid-template-columns: 280px 1fr;
+  }
+
+  .playerPane {
+    position: static;
+  }
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+    width: min(960px, 100% - 3rem);
+  }
+
+  .playerPane {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .app {
+    gap: 1.5rem;
+  }
+}
